@@ -7,16 +7,11 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-html, body, div, span, applet, object,
-iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
-pre, a, abbr, acronym, address, big, cite,
-code, del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var, b,
-u, i, center, dl, dt, dd, ol, ul, li, fieldset,
-form, label, legend, table, caption, tbody,
-tfoot, thead, tr, th, td, article, aside,
-canvas, details, embed, figure, figcaption,
-footer, header, hgroup, menu, nav, output, ruby,
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby,
 section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
@@ -25,8 +20,7 @@ section, summary, time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;}
 
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 	display: block;}
 
 body {
@@ -2128,7 +2122,7 @@ input, select, textarea {
 
 	ul {
 		list-style: disc;
-		margin: 0 0 2em 0;
+		margin: 0 0 0.5em 0;
 		padding-left: 1em;
 	}
 
@@ -2996,7 +2990,7 @@ input, select, textarea {
 		}
 
 			#main > .inner > section {
-				padding: 6em 0 4em 0 ;
+				padding: 2em 0 4em 0 ; /*padding: 6em 0 4em 0 ;*/
 				border-top: solid 2px rgba(210, 215, 217, 0.75);
 			}
 
@@ -3011,7 +3005,7 @@ input, select, textarea {
 			}
 
 				#main > .inner > section {
-					padding: 5em 0 3em 0 ;
+					padding: 2em 0 1em 0 ;/* padding: 6em 0 3em 0 ;*/
 				}
 
 		}
@@ -3111,8 +3105,8 @@ input, select, textarea {
 
 			#sidebar > .inner > * {
 				border-bottom: solid 2px rgba(210, 215, 217, 0.75);
-				margin: 0 0 3.5em 0;
-				padding: 0 0 3.5em 0;
+				margin: 0 0 2.5em 0;
+				padding: 0 0 2.5em 0;
 			}
 
 				#sidebar > .inner > * > :last-child {
@@ -3388,7 +3382,7 @@ input, select, textarea {
 			flex-shrink: 0;
 			display: block;
 			margin: 0 0 2em 4em;
-			width: 50%;
+			width: 60%;  /*width: 50%;*/
 		}
 
 			#banner .image img {
@@ -3569,3 +3563,59 @@ input, select, textarea {
 			margin-top: 0;
 			padding-top: 0;
 		}
+
+/* Modal */
+
+.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.5);
+	z-index: 99999;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	display: none;
+	pointer-events: none;
+}
+
+.modalDialog:target {
+	display: block;
+	pointer-events: auto;
+}
+
+.modalDialog > div {
+	width: 50%;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 4px;
+	background: #fff;
+	background: -moz-linear-gradient(#fff, #ddd);
+	background: -webkit-linear-gradient(#fff, #ddd);
+	background: -o-linear-gradient(#fff, #ddd);
+}
+
+.close {
+	background: #a00000;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover { background: #00a000 }

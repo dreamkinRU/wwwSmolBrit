@@ -206,7 +206,7 @@
 										.css('top', '');
 								else
 									$sidebar_inner
-										.css('top', -1 * x);
+										.css('top', '');
 
 							}
 							else {
@@ -215,7 +215,7 @@
 									$sidebar_inner
 										.data('locked', 1)
 										.css('position', 'fixed')
-										.css('top', -1 * x);
+										.css('top', '');
 
 							}
 
